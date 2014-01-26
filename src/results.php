@@ -19,13 +19,11 @@
     <head>
 
 		<!-- jquery and jquery cookie -->
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script>
 			function sendMessage(str)
 			{
-				var xmlhttp=new XMLHttpRequest();
-				xmlhttp.onreadystatechange=function()
-				xmlhttp.open("GET", "send-message.php?q="+str, true);
-				xmlhttp.send();
+				$.ajax("./send-message.php").done(function(e){ alert("Pinged Successfully"); })
 			}
 		</script>
 		<script src="js/jquery.cookie.js"></script>
