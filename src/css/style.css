@@ -2,3 +2,7 @@ div.login-box{
   margin:0 auto;
   width: 70%;
 }
+
+#date {
+	display: none;
+}
