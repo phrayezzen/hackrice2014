@@ -50,7 +50,7 @@
 	    	var buh = getQueryVariable('now');
 	    	$(document).ready(function() {
 		    	if(buh==='true') {
-		    		$("#date").css("display","block");
+		    		$("#hideMe").css("display","block");
 		    	}
 		    });
     	</script>
@@ -65,7 +65,7 @@
 						<option value="RIC">Rice</option>
 					</select>
 				</div>
-				<div class="form-group" id="date">
+				<div class="form-group" class="hideMe">
 					<label for="inputDate">Date</label>
 					<input class="form-control" id="inputDate" type="date" name="date" />
 				</div>

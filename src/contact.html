@@ -1,0 +1,62 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+
+		<!-- jquery and jquery cookie -->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+		<!-- custom -->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>Contact</title>
+	</head>
+	<body>
+
+		<script>
+			console.log('buh')
+			$(document).ready(function() {
+				$(".texting").click(function() {
+					console.log('buh');
+					$(".hideMe").css("display","block");
+				});
+			});
+		</script>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img height="30" src="assets/logo.png" alt="Logo"/> </a>
+				</div>
+				<div class="rcollapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div id="content" class="container">
+			<div class="jumbotron text-center">
+				<h2>How do we contact you?</h2>
+				<form id="login" action="#">
+	  				<a class="btn btn-primary btn-lg btn-block" href="results.html">Email</a>
+  					<a class="btn btn-primary btn-lg btn-block texting">Texting</a>
+					<div class="hideMe">
+						<form name="phone" action="#">
+							<input name="phone" /><a class="btn btn-primary btn-lg btn-block" href="results.html">GO</a>
+						</form>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

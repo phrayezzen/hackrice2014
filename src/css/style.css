@@ -7,7 +7,11 @@ div.login-box{
   width: 70%;
 }
 
-#date {
+.hideMe {
 	display: none;
+}
+
+.navbar {
+	background-color: navy;
 }
 
