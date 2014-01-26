@@ -6,6 +6,7 @@
 	$place = $_GET["place"];
 	$date = $_GET["date"];
 	$time = $_GET["time"];
+	$phone = $_GET["phone"];
 
 	//$user = $_COOKIE["user"];
 	$user = "amn2";
@@ -25,7 +26,8 @@
 	$hitch = array(
 	  $user => array(
 		"name" => $name,
-		"time" => $time
+		"time" => $time,
+		"phone" => $phone
 	  )
 	);
 

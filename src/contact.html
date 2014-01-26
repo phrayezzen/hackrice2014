@@ -5,12 +5,12 @@
 		<!-- jquery and jquery cookie -->
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="js/jquery.cookie.js"></script>
+		<script src="js/hackrice.js"></script>
 
 		<!-- bootstrap -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
 		<!-- custom -->
 		<link rel="stylesheet" href="css/style.css" />
 
@@ -21,8 +21,13 @@
 		<script>
 			console.log('buh')
 			$(document).ready(function() {
+				var place = getQueryVariable('place');
+				var date = getQueryVariable('date');
+				var time = getQueryVariable('time');
+				$("form").append("<input type='hidden' name='time' value='" + time + "'></input>");
+				$("form").append("<input type='hidden' name='date' value='" + date + "'></input>");
+				$("form").append("<input type='hidden' name='place' value='" + place +  "'></input>");
 				$(".texting").click(function() {
-					console.log('buh');
 					$(".hideMe").css("display","block");
 				});
 			});
@@ -47,13 +52,16 @@
 		<div id="content" class="container">
 			<div class="jumbotron text-center">
 				<h2>How do we contact you?</h2>
-				<form id="login" action="#">
-	  				<a class="btn btn-primary btn-lg btn-block" href="results.html">Email</a>
+				<form class="form-inline" id="login" action="./add-hitch.php">
+	  				<input type="submit" value="Email" class="btn btn-primary btn-lg btn-block"></input>
   					<a class="btn btn-primary btn-lg btn-block texting">Texting</a>
 					<div class="hideMe">
-						<form name="phone" action="#">
-							<input name="phone" /><a class="btn btn-primary btn-lg btn-block" href="results.html">GO</a>
-						</form>
+
+						<div class="form-group">
+							<label for="inputPhone">What's your phone number?</label>
+							<input style="width: inherit;" class="form-control" id="inputPhone" type="tel" pattern='\d{3}[\-]\d{3}[\-]\d{4}' name="phone" title="999-999-9999" />
+						</div>
+						<input type="submit" class="btn btn-primary btn-lg" value="Go!"></input>
 					</div>
 				</form>
 			</div>
