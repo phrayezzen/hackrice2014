@@ -1,14 +1,6 @@
-#home {
-	text-align:center;
-	position:absolute;
-  	top:50%;
-  	left:50%;
-  	margin-top:-50px; /* this is half the height of your div*/  
-  	margin-left:-100px; /*this is half of width of your div*/
-}
-
-#login {
-	padding-top: 50%;
+div.login-box{
+  margin:0 auto;
+  width: 70%;
 }
 
 #date {
