@@ -49,33 +49,16 @@
 }else	{
 	//Email Client
 	$mail=new PHPMailer;
-	
-	$mail->isSMTP();
-	$mail->Host= 'smtp1.example.com;smtp2.example.com
-	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'jswan';                            // SMTP username
-	$mail->Password = 'secret';                           // SMTP password
-	$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
-
-	$mail->From = $From_email;
-	$mail->FromName = $To_name;
+	$mail->SetFrom($From_email,$To_name);
 	$mail->addAddress({$receiver}+'@rice.edu', {$To_name});  // Add a recipient
 	$mail->addReplyTo({$From_email}, 'Information');
-	
-	$mail->WordWrap = 50;                                 // Set word wrap to 50 character
-	$mail->isHTML(true);                                  // Set email format to HTML
 
 	$mail->Subject = 'Hitch Hike Notification';
 	$mail->Body    = "Hi,"+ {$To_name}!+ " I'm"+ {$From_name}+", and I'm interested in meeting up at"+ {$place}+" at "+ {$time}+" on "+ {$date}+".  My contact info is"+ {$From_info}+".";
 	$mail->AltBody = "Hi,"+ {$To_name}!+ " I'm"+ {$From_name}+", and I'm interested in meeting up at"+ {$place}+" at "+ {$time}+" on "+ {$date}+".  My contact info is"+ {$From_info}+"."
-
-	if(!$mail->send()) {
-	   echo 'Message could not be sent.';
-	   echo 'Mailer Error: ' . $mail->ErrorInfo;
-	   exit;
-	}
-	}
 	
+	var_dump( $mail->send() );
+	}
 	echo "{$To_name} has been contacted."
 
 ?>
