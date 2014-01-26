@@ -15,7 +15,7 @@
 
 	$user="amn2";
 	$time=$arrangements[$user]["time"];
-	$From_name="name".$user;
+	$From_name=$user;
 	if ($arrangements[$user]["phone"]!=null)
 	{
 		$From_info=$arrangements[$user]["phone"];
@@ -26,8 +26,9 @@
 		$From_email=$From_info;
 	}
 
-	$receiver="bsw2";
-	$To_name="name".$receiver;
+	$receiver=$_REQUEST["q"];
+//until get get a proper way to get names from the LDAP,  then we can only use the net id's
+	$To_name=$receiver;
 
 	if($arrangements[$receiver]["phone"]!=null)
 { 
