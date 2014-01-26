@@ -6,3 +6,11 @@
   	margin-top:-50px; /* this is half the height of your div*/  
   	margin-left:-100px; /*this is half of width of your div*/
 }
+
+#login {
+	padding-top: 50%;
+}
+
+#date {
+	display: none;
+}
