@@ -19,7 +19,15 @@
     <head>
 
 		<!-- jquery and jquery cookie -->
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+			function sendMessage(str)
+			{
+				var xmlhttp=new XMLHttpRequest();
+				xmlhttp.onreadystatechange=function()
+				xmlhttp.open("GET", "send-message.php?q="+str, true);
+				xmlhttp.send();
+			}
+		</script>
 		<script src="js/jquery.cookie.js"></script>
 
 		<!-- bootstrap -->
@@ -67,7 +75,7 @@
 	<tr>
 		<td><? echo($val->{"name"}); ?></td>
 		<td><? echo($val->{"time"}); ?></td>
-		<td><button class="btn">Message</button></td>
+		<td><input type=button value="Message" onClick="sendMessage(<?$val?>)"></input></td>
 	</tr>
 <?php
 	}
