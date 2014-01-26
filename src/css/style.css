@@ -7,11 +7,24 @@ div.login-box{
   width: 70%;
 }
 
+#logo img {
+	width: 200px;
+	height: auto;
+}
+
 .hideMe {
 	display: none;
 }
 
-.navbar {
+/*.navbar {
 	background-color: navy;
+}*/
+
+.jumbotron, table {
+	max-width: 500px;
+	margin: 0 auto;
 }
 
+#inputPhone {
+	width: 50px;
+}

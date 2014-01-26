@@ -65,7 +65,9 @@
 					<tr>
 						<th>Name</th>
 						<th>Departure Time</th>
-						<th></th>
+						<th>Ask to Join</th>
+						<th>Message</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>

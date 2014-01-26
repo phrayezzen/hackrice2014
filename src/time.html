@@ -1,6 +1,6 @@
 <!DOCTYPE HTML5>
 <html>
-    <head>
+	<head>
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="js/hackrice.js"></script>
 		<!-- Latest compiled and minified CSS -->
@@ -9,91 +9,91 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
-		<!-- Latest compiled and minified JavaScript 
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+			<!-- Latest compiled and minified JavaScript 
+			<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Pick a Time</title>
-    </head>
-    <body> 
-         <div class="navbar navbar-inverse navbar-fixed-top">
-   <div class="container">
-     <div class="navbar-header">
-       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img height="30" src="assets/logo.png" alt="Logo"> </a>
-      </div>
-      <div class="rcollapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="./logout.php">Logout</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-  </div>
-
-    	
-    	<script>
-
-	    	var buh = getQueryVariable('now');
-	    	$(document).ready(function() {
-		    	if(buh!=='true') {
-		    		$("#date").css("display","block");
-		    	} else {
-				var a = new Date();
-				console.log("HI");
-				var month = (1 + a.getMonth());
-				if( month < 10 ){
-					month = "0" + month;
-				}
-				var day = a.getDate();
-				if( day < 10 ){
-					day = "0" + day;
-				}
-				var curDate = (1900 + a.getYear()) + "-" + month + "-" + day;
-				var hour = a.getHours();
-				if( hour < 10 ){
-					hour = "0" + hour;
-				}
-				var min = a.getMinutes();
-				if( min < 10 ){
-					min = "0" + min;
-				}
-
-				var curTime = hour + ":" + min;
-				console.log(curDate);
-				console.log(curTime);
-				$("#inputDate").val(curDate);
-				$("#inputTime").val(curTime);
-			}
-		    });
-    	</script>
-		
-		<div class="container jumbotron" id="content">
-			<form action="./contact.html">
-				<div class="form-group">
-					<label for="inputPlace">I need a ride to:</label>
-					<select class="form-control" id="inputPlace" name="place">
-						<option value="HOU">Hobby</option>
-						<option value="IAH">IAH</option>
-						<option value="RIC">Rice</option>
-					</select>
+	</head>
+	<body> 
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img height="30" src="assets/logo.png" alt="Logo"> </a>
 				</div>
-				<div class="hideMe" id="date">
-					<div class="form-group">
-						<label for="inputDate">Date</label>
-						<input class="form-control" id="inputDate" type="date" name="date" />
-					</div>
-					<div class="form-group">
-						<label for="inputTime">Time</label>
-						<input class="form-control" id="inputTime" type="time" name="time" />
-					</div>
-				</div>
-				<input class="btn btn-primary btn-lg btn-block" type="submit" value="Hitch!"></input>
-			</form>
+				<div class="rcollapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="./logout.php">Logout</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
 		</div>
-    </body>
+	</div>
+
+
+	<script>
+
+	var buh = getQueryVariable('now');
+	$(document).ready(function() {
+		if(buh!=='true') {
+			$("#date").css("display","block");
+		} else {
+			var a = new Date();
+			console.log("HI");
+			var month = (1 + a.getMonth());
+			if( month < 10 ){
+				month = "0" + month;
+			}
+			var day = a.getDate();
+			if( day < 10 ){
+				day = "0" + day;
+			}
+			var curDate = (1900 + a.getYear()) + "-" + month + "-" + day;
+			var hour = a.getHours();
+			if( hour < 10 ){
+				hour = "0" + hour;
+			}
+			var min = a.getMinutes();
+			if( min < 10 ){
+				min = "0" + min;
+			}
+
+			var curTime = hour + ":" + min;
+			console.log(curDate);
+			console.log(curTime);
+			$("#inputDate").val(curDate);
+			$("#inputTime").val(curTime);
+		}
+	});
+	</script>
+
+	<div class="container jumbotron" id="content">
+		<form action="./contact.html">
+			<div class="form-group">
+				<label for="inputPlace">I need a ride to:</label>
+				<select class="form-control" id="inputPlace" name="place">
+					<option value="RIC">Rice University</option>
+					<option value="HOU">Hobby Airport (HOU)</option>
+					<option value="IAH">George Bush Intercontinental Airport (IAH)</option>
+				</select>
+			</div>
+			<div class="hideMe" id="date">
+				<div class="form-group">
+					<label for="inputDate">Date</label>
+					<input class="form-control" id="inputDate" type="date" name="date" />
+				</div>
+				<div class="form-group">
+					<label for="inputTime">Time</label>
+					<input class="form-control" id="inputTime" type="time" name="time" />
+				</div>
+			</div>
+			<input class="btn btn-primary btn-lg btn-block" type="submit" value="Hitch!"></input>
+		</form>
+	</div>
+</body>
 </html>

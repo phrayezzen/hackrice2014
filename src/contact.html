@@ -19,7 +19,6 @@
 	<body>
 
 		<script>
-			console.log('buh')
 			$(document).ready(function() {
 				var place = getQueryVariable('place');
 				var date = getQueryVariable('date');
@@ -59,9 +58,14 @@
 
 						<div class="form-group">
 							<label for="inputPhone">What's your phone number?</label>
-							<input style="width: inherit;" class="form-control" id="inputPhone" type="tel" pattern='\d{3}[\-]\d{3}[\-]\d{4}' name="phone" title="999-999-9999" />
+							<div class="tel-num">
+								<input type="tel" value="" maxlength="3" name="phoneNumber" id="inputPhone" class="form-control"/>-
+	                        	<input type="tel" value="" maxlength="3" name="phoneNumber" id="inputPhone" class="form-control"/>-
+	                        	<input type="tel" value="" maxlength="4" name="phoneNumber" id="inputPhone" class="form-control"/>
+								<!-- <input style="width: inherit;" class="form-control" id="inputPhone" type="tel" pattern='\d{3}[\-]\d{3}[\-]\d{4}' name="phone" title="999-999-9999" /> -->
+								<input type="submit" class="btn btn-primary btn-lg" value="GO"></input>
+							</div>
 						</div>
-						<input type="submit" class="btn btn-primary btn-lg" value="Go!"></input>
 					</div>
 				</form>
 			</div>
