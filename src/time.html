@@ -55,19 +55,19 @@
 		    });
     	</script>
 		
-		<div id="home">
-			<div id="logo">
-				<img src="assets/logo.png" /><br />
-			</div>
+		<div class="container jumbotron" id="content">
 			<form id="login" action="#">
-				Place: 
-				<select name="place">
-					<option value="HOU">Hobby</option>
-					<option value="IAH">IAH</option>
-					<option value="RIC">Rice</option>
-				</select>
-				<div id="date">
-					Day: <input type="date" name="date" />
+				<div class="form-group">
+					<label for="inputPlace">I need a ride to:</label>
+					<select class="form-control" id="inputPlace" name="place">
+						<option value="HOU">Hobby</option>
+						<option value="IAH">IAH</option>
+						<option value="RIC">Rice</option>
+					</select>
+				</div>
+				<div class="form-group" id="date">
+					<label for="inputDate">Date</label>
+					<input class="form-control" id="inputDate" type="date" name="date" />
 				</div>
 			</form>
 		</div>
