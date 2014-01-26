@@ -3,7 +3,15 @@
     <head>
 
 		<!-- jquery and jquery cookie -->
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+			function sendMessage(str)
+			{
+				var xmlhttp=new XMLHttpRequest();
+				xmlhttp.onreadystatechange=function()
+				xmlhttp.open("GET", "send-message.php?q="+str, true);
+				xmlhttp.send();
+			}
+		</script>
 		<script src="js/jquery.cookie.js"></script>
 
 		<!-- bootstrap -->
@@ -17,6 +25,14 @@
 		<title>Results</title>
     </head>
     <body>
+    	<script>
+    		$(document).ready(function() {
+    			$("button").click(function() {
+    				$(this).button("disable")
+    				$(this).
+    			})
+    		})
+    	</script>
 	 	<div class="navbar navbar-inverse navbar-fixed-top">
 		   	<div class="container">
 		     	<div class="navbar-header">
@@ -25,7 +41,7 @@
 			        	<span class="icon-bar"></span>
 		           		<span class="icon-bar"></span>
   		  	    	</button>
- 		       		<a class="navbar-brand" href="#"><img height="30" src="assets/logo.png" alt="Logo"/> </a>
+ 		       		<a class="navbar-brand" href="hitch.html"><img height="30" src="assets/title.png" alt="Logo"/> </a>
 		      	</div>
 		      	<div class="rcollapse navbar-collapse">
 		        	<ul class="nav navbar-nav navbar-right">
@@ -36,19 +52,37 @@
 	  	</div>
 
 		<div id="content" class="container">
-			<table class="table table-striped table-hover">
+			<table class="table table-striped">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Name</th>
 						<th>Departure Time</th>
-						<th></th>
+						<th>Ask to Join</th>
+						<th>Message</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Abdul</td>
-						<td>7:00pm</td>
-						<td><button>Message</button></td>
+						<td></td>
+						<td>lh15</td>
+						<td>8:00am</td>
+						<td>
+							<button type="button" class="btn btn-default btn-lg">
+				  			<span class="glyphicon glyphicon-plus"></span> 
+							</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-default btn-lg">
+				  			<span class="glyphicon glyphicon-envelope"></span> 
+							</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-default btn-lg">
+				  			<span class="glyphicon glyphicon-thumbs-up"></span> 
+							</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
